@@ -3,8 +3,6 @@ layout: post
 title: APFS Advent Challenge 2022
 ---
 
-# Overview
-
 As exercise in self discipline, I've decided to get an early start on my 2023 New Year's resolution of writing more and sharing what research I can with the community.  As a sort of Digital Forensics Advent Calendar, I'm going to attempt to publish a daily series of informative blog posts detailing internals of Apple's APFS file system.
 
 ## Why APFS?
