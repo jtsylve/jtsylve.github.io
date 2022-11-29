@@ -48,22 +48,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: xx-large;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: x-large;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: larger;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: large;
   color: $gray;
 }
 
@@ -111,6 +111,37 @@ strong, b {
 
 img {
   max-width: 100%;
+}
+
+pre, table {
+  padding: 7px 7px 7px 10px;
+  border: 1px solid #ddd;
+  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
+  box-shadow: 3px 3px rgba(0,0,0,0.1);
+  margin: 20px auto 20px auto;
+  overflow: scroll;
+  border-collapse:collapse;
+  font-size:small;
+}
+
+th, td, dt {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+td {
+  text-align: justify;
+}
+
+dt {
+  font-weight:700;
+}
+
+th {
+  background-color: $lightGray;
+  font-weight: bold;
+  text-align: center;
 }
 
 // Fixes images in popup boxes from Google Translate
@@ -256,7 +287,6 @@ nav {
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
     font-style: italic;
   }
 
@@ -281,7 +311,7 @@ footer {
   padding: 20px 0;
   text-align: center;
   p {
-    font-size: 12px;
+    font-size: x-small;
     color: $darkGray;
     margin: 0;
   }
