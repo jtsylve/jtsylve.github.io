@@ -25,4 +25,7 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 
 3) **For each failed deadline, I will donate $100 to a Ukrainian relief fund.**  As a result of the unprovoked war of aggression and the continued occupation of Ukraine, the people of Ukraine are suffering loss at a massive scale. The intentional targeting and destruction of Ukrainian civilian infrastructure and power generation capabilities as winter sets in has only increased the suffering of the civilian population.  For each day that I do not meet my self imposed deadline of publishing, I will donate additional money towards humanitarian relief for the people of Ukraine.  If I do meet my publishing goals (or even if I don't), and it is within your means, I would ask that you too consider making your own donation this holiday season.  
 
+## The Posts
+
+- [Day 1 - Anatomy of An APFS Object](/post/2022/12/01/Anatomy-of-an-APFS-Object)
 
