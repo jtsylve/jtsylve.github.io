@@ -3,7 +3,7 @@ layout: post
 title: 2022 APFS Advent Challenge Day 1 - Anatomy of an Object
 ---
 
-APFS is a _copy-on-write_ file system, consisting of a set of immutable objects that are the fundamental building blocks of the file system's design.  _APFS objects_ are made up of one or more fixed-size _blocks_.  Block sizes are configurable at the time of formatting a new container.  Valid block sizes are any power-of-two sized value between 4096 and 65536 bytes and must always be an integer multiple of the block size of the underlying storage device.  At the time of this writing, the default (and thus most common) block size is 4096 bytes.
+APFS is a _copy-on-write_ file system, consisting of a set of immutable objects that are the fundamental building blocks of the file system's design.  _APFS objects_ are made up of one or more fixed-size _blocks_.  Block sizes are configurable at the time of formatting a new container.  Valid block sizes are any power-of-two sized value between 4 KiB and 64 KiB of data, and must always be an integer multiple of the block size of the underlying storage device.  At the time of this writing, the default (and thus most common) block size is 4 KiB.
 
 
 ## Object Headers
@@ -59,10 +59,14 @@ uint64_t fletcher64(const void* data, size_t size) {
 
         words_left -= n;
         words += n;
-    } 
+    }
+
+    // Calculate the value needed to be able to get a checksum of zero
+    const uint64_t ck_low = UINT32_MAX - ((sum1 + sum2) % UINT32_MAX);
+    const uint64_t ck_high = UINT32_MAX - ((sum1 + ck_low) % UINT32_MAX);
 
     // Combine the sums
-    return sum1 | (sum2 << 64);
+    return ck_low | (ck_high << 32);
 }
 ```
 
