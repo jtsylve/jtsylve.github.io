@@ -1,6 +1,6 @@
 ---
 layout: post
-title: APFS Advent Challenge 2022 Day 1 - Anatomy of an Object
+title: 2022 APFS Advent Challenge Day 1 - Anatomy of an Object
 ---
 
 APFS is a _copy-on-write_ file system, consisting of a set of immutable objects that are the fundamental building blocks of the file system's design.  _APFS objects_ are made up of one or more fixed-size _blocks_.  Block sizes are configurable at the time of formatting a new container.  Valid block sizes are any power-of-two sized value between 4096 and 65536 bytes and must always be an integer multiple of the block size of the underlying storage device.  At the time of this writing, the default (and thus most common) block size is 4096 bytes.
@@ -150,3 +150,5 @@ The two _most-significant_ bits are used to denote the _kind_ of APFS object: vi
 If the `OBJ_NOHEADER` flag is set, then the object type in question does not start with an `obj_phys_t` header.  These types of objects are rare, and so far I've only seen it used for _space manager bitmap_ objects.  Note that these objects are different than the _headerless_ objects that are used in sealed volumes, which we will discuss in a future posts.
 
 The `OBJ_ENCRYPTED` flag denotes an object that is always encrypted on disk, and the `OBJ_NONPERSISTENT` flag denotes an object that is never written to disk at all (this flag will only be set for ephemeral objects in memory that do not require persistence).
+
+{% include advent2022.html %}

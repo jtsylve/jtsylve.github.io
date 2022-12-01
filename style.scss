@@ -314,18 +314,36 @@ nav {
     width: 100%;
 
     text-overflow: clip;
+
+    .prev {
+      max-width: 48%;
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .next {
+      max-width: 48%;
+      text-align: right;
+      overflow: hidden;
+    }
   }
 
-  .navigation .prev {
-    max-width: 48%;
-    text-align: left;
-    overflow: hidden;
-  }
-  
-  .navigation .next {
-    max-width: 48%;
-    text-align: right;
-    overflow: hidden;
+  .message {
+    border: medium darkred solid;
+    padding: 0 15px;
+    width: 75%;
+    margin: 35px auto;
+    font-size: smaller;
+    background-color: $lightGray;
+    text-align: center;
+
+    p {
+      text-align: justify;
+    }
+
+    h3 {
+      font-size: medium;
+    }
   }
 }
 
