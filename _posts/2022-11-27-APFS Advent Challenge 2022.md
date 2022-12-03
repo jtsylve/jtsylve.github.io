@@ -19,7 +19,7 @@ I've chosen the topic of APFS for three main reasons:
 
 All good challenges needs rules in order to keep us honest.  Luckily for me, I'm challenging myself to this task, so I get to set the requirements.
 
-1) **I will publish a short blog post every day between December 1st and 24th of this year.**  While I am aware that the Christian season of Advent technically starts on November 27th, I am not doing this as a part of any religious observance and most modern Advent calendars start on December 1st anyway.  Besides, I only just had this idea and haven't had time to plan out my topics.
+1) **I will publish a short blog post ~~every day between December 1st and 24th~~ every weekday in December.**  While I am aware that the Christian season of Advent technically starts on November 27th and ends on Christmas, I am not doing this as a part of any religious observance and most modern Advent calendars start on December 1st anyway.  Besides, I only just had this idea and haven't had time to plan out my topics.
 
 2) **As long as it's before the clock strikes midnight on a given day *somewhere* on the planet Earth, it counts.**  Since I will have to limit myself to writing after work hours and teaching my night classes, I am not limiting myself to my own timezone.  This challenge is supposed to be rewarding, not stressful.
 

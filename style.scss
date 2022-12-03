@@ -20,7 +20,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 1.3em/1.4 $helvetica;
   color: $darkGray;
   height: 100%;
   display: flex;
@@ -113,37 +113,6 @@ img {
   max-width: 100%;
 }
 
-pre, table {
-  padding: 7px 7px 7px 10px;
-  border: 1px solid #ddd;
-  -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-  box-shadow: 3px 3px rgba(0,0,0,0.1);
-  margin: 20px auto 20px auto;
-  overflow: scroll;
-  border-collapse:collapse;
-  font-size:small;
-}
-
-th, td, dt {
-  padding: 5px;
-  border: 1px solid #ddd;
-}
-
-td {
-  text-align: justify;
-}
-
-dt {
-  font-weight:700;
-}
-
-th {
-  background-color: $lightGray;
-  font-weight: bold;
-  text-align: center;
-}
-
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
@@ -233,7 +202,7 @@ th {
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
-  font-size: 16px;
+  font-size: smaller;
 
   @include mobile {
     margin: 3px 0;
@@ -244,13 +213,13 @@ nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
-  font-size: 18px;
+  font-size: x-large;
 
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
-    font-size: 16px;
+    font-size: large;
   }
 
   a {
@@ -283,6 +252,8 @@ nav {
 
 .post { 
 
+  text-align: justify;
+
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -297,7 +268,7 @@ nav {
 
   .read-more {
     text-transform: uppercase;
-    font-size: 15px;
+    font-weight: bold;
   }
 
   .issues {
@@ -326,6 +297,37 @@ nav {
       text-align: right;
       overflow: hidden;
     }
+  }
+
+  pre, table, img {
+    padding: 7px 7px 7px 10px;
+    border: 1px solid #ddd;
+    -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
+    box-shadow: 3px 3px rgba(0,0,0,0.1);
+    margin: 20px auto 20px auto;
+    overflow: scroll;
+    border-collapse:collapse;
+    font-size:small;
+  }
+  
+  th, td, dt {
+    padding: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  td {
+    text-align: justify;
+  }
+  
+  dt {
+    font-weight:700;
+  }
+  
+  th {
+    background-color: $lightGray;
+    font-weight: bold;
+    text-align: center;
   }
 
   .message {
