@@ -29,4 +29,4 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 
 - [Day 1 - Anatomy of An APFS Object](/post/2022/12/01/Anatomy-of-an-APFS-Object)
 - [Day 2 - Kinds of APFS Objects](/post/2022/12/02/Kinds-of-APFS-Objects)
-
+- [Day 3 - APFS Containers](/post/2022/12/05/APFS-Containers)
