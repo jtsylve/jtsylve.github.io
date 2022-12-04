@@ -15,17 +15,16 @@ layout: default
   <div class="issues">
     <p>Find an issue or technical inaccuracy in this post?  Please <a href="https://github.com/jtsylve/jtsylve.github.io/issues">file an issue</a> so that it may be corrected.</p>
   </div>
-
-  <div class="navigation">
-      <p class="prev">
-        {% if page.previous.url %}
-        <a href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-        {% endif %}
-      </p>
-      <p class="next">
-        {% if page.next.url %}
-        <a href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-        {% endif %}
-      </p>
-  </div>
 </article>
+<div class="navigation">
+  <p class="prev">
+    {% if page.previous.url %}
+    <a href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+    {% endif %}
+  </p>
+  <p class="next">
+    {% if page.next.url %}
+    <a href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+    {% endif %}
+  </p>
+</div>
