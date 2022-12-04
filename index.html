@@ -23,7 +23,7 @@ layout: default
 <div class="navigation">
   <p class="prev">
     {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}">&laquo; Older</a>
+    <a href="{{ paginator.previous_page_path }}">&laquo; Newer</a>
     {% endif %}
   </p>
   <p class="current">
@@ -31,7 +31,7 @@ layout: default
   </p>
   <p class="next">
     {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">Newer &raquo;</a>
+    <a href="{{ paginator.next_page_path }}">Older &raquo;</a>
     {% endif %}
   </p>
 </div>
