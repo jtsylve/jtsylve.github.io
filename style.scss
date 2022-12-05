@@ -32,6 +32,9 @@ body {
   padding: 0 10px;
   width: 95%;
   flex: 1 0 auto;
+
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -332,8 +335,8 @@ nav {
   justify-content: space-between; 
   width: 100%;
   font-size: medium;
-  text-overflow: clip;
   font-weight: bold;
+  margin-top: auto;
 
   .prev {
     max-width: 48%;
@@ -355,7 +358,6 @@ nav {
 .navigation > * { flex: 1; }
 
 .wrapper-footer {
-  margin-top: 25px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   background-color: $lightGray;
