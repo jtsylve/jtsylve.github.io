@@ -20,7 +20,7 @@ html {
 
 body {
 	background: $white;
-  font: 1.2em/1.4 $helvetica;
+  font: 1.1em/1.4 $helvetica;
   color: $darkGray;
   height: 100%;
   display: flex;
@@ -66,7 +66,7 @@ h3 {
 }
 
 h4 {
-  font-size: larger;
+  font-size: large;
   color: $gray;
 }
 
@@ -263,6 +263,10 @@ nav {
     font-style: italic;
   }
 
+  hr {
+    border: thin dashed gray;
+  }
+
   .comments {
     margin-top: 10px;
   }
@@ -286,7 +290,7 @@ nav {
     -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
     -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
     box-shadow: 3px 3px rgba(0,0,0,0.1);
-    margin: 20px auto 20px auto;
+    margin: 15px auto 15px auto;
     overflow: scroll;
     border-collapse:collapse;
     font-size:smaller;
