@@ -31,3 +31,4 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 - [Day 2 - Kinds of APFS Objects](/post/2022/12/02/Kinds-of-APFS-Objects)
 - [Day 3 - APFS Containers](/post/2022/12/05/APFS-Containers)
 - [Day 4 - NX Superblock Objects](/post/2022/12/06/APFS-NX-Superblock)
+- [Day 5 - Checkpoint Maps and Ephemeral Objects](/post/2022/12/07/APFS-Checkpoint-Maps)
