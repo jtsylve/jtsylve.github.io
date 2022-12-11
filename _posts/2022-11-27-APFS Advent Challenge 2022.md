@@ -34,3 +34,4 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 - [Day 5 - Checkpoint Maps and Ephemeral Objects](/post/2022/12/07/APFS-Checkpoint-Maps)
 - [Day 6 - B-Trees (Part 1)](/post/2022/12/08/APFS-BTrees)
 - [Day 7 - B-Trees (Part 2)](/post/2022/12/09/APFS-BTrees-2)
+- [Day 8 - Object Maps](/post/2022/12/12/APFS-OMAP)
