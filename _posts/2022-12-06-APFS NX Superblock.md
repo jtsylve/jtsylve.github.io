@@ -126,13 +126,13 @@ Block 0 of the disk partition always contains a copy of the container's `nx_supe
 
 First, it is necessary to determine whether in fact we are dealing with an APFS container in the first place, and (if so) to identify the container's fixed block size.
 
-1) Start by reading at least 4 KiB of data from the start of the partition.  On an APFS formatted partition, this should always be a valid `nx_superblock_t` structure.
+1. Start by reading at least 4 KiB of data from the start of the partition.  On an APFS formatted partition, this should always be a valid `nx_superblock_t` structure.
 
-2) Validate the object type in the `nx_o.o_type` field and that the `nx_magic` field is set to the `NX_MAGIC` value.
+2. Validate the object type in the `nx_o.o_type` field and that the `nx_magic` field is set to the `NX_MAGIC` value.
 
-3) Read the container's block size from the `nx_block_size` field.  If it is larger than 4 KiB, re-read the block-zero superblock into memory with the correct block size.
+3. Read the container's block size from the `nx_block_size` field.  If it is larger than 4 KiB, re-read the block-zero superblock into memory with the correct block size.
 
-4) [Calculate the object's checksum](/post/2022/12/01/Anatomy-of-an-APFS-Object) and validate it against the value in its object header.
+4. [Calculate the object's checksum](/post/2022/12/01/Anatomy-of-an-APFS-Object) and validate it against the value in its object header.
 
 If all goes well, we're in business.
 

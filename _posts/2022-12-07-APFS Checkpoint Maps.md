@@ -41,6 +41,7 @@ typedef struct checkpoint_map_phys {
     checkpoint_mapping_t cpm_map[]; // 0x28
 } checkpoint_map_phys_t;
 ```
+
 - `cpm_o`: The [object header](/post/2022/12/01/Anatomy-of-an-APFS-Object)
 - `cpm_flags`: A set of bit-flags.  Currently, only `CHECKPOINT_MAP_LAST` is defined
 - `cmp_count`: The number of mappings stored in this Checkpoint Map
@@ -53,15 +54,15 @@ Once you've identified the location of the Checkpoint Data Area, enumeration of 
 
 Because there are relatively few persistent, ephemeral objects, [linear time](https://en.wikipedia.org/wiki/Time_complexity#Linear_time) enumeration of all of a checkpoint's mappings is practical.  This means that there aren't any complex data structures that get in between us and the objects that we're looking for.
 
-1) The `nx_xp_desc_index` member of the Checkpoint's `nx_superblock_t` stores a zero-based block index into the Checkpoint Descriptor Area.  This is the location of the first Checkpoint Map Object.  Locate this object and validate it using the checksum stored in its object header.
+1. The `nx_xp_desc_index` member of the Checkpoint's `nx_superblock_t` stores a zero-based block index into the Checkpoint Descriptor Area.  This is the location of the first Checkpoint Map Object.  Locate this object and validate it using the checksum stored in its object header.
 
-2) Read the `cmp_count` member of the Checkpoint Map.  This contains the number of Checkpoint Mappings stored in the current map.
+2. Read the `cmp_count` member of the Checkpoint Map.  This contains the number of Checkpoint Mappings stored in the current map.
 
-3) Enumerate the mappings stored in the `cpm_map` array.  These mappings each contain information about an on-disk ephemeral object, including the physical block address in which it is stored.
+3. Enumerate the mappings stored in the `cpm_map` array.  These mappings each contain information about an on-disk ephemeral object, including the physical block address in which it is stored.
 
-4) Once all mappings have been enumerated, read the `cmp_flags` member.  If the bit defined in `CHECKPOINT_MAP_LAST` is set, you've reached the end of your journey; otherwise, there are more ephemeral objects to enumerate.
+4. Once all mappings have been enumerated, read the `cmp_flags` member.  If the bit defined in `CHECKPOINT_MAP_LAST` is set, you've reached the end of your journey; otherwise, there are more ephemeral objects to enumerate.
 
-5) The next Checkpoint Map Object should follow the current map object, but it is important to remember that the Checkpoint Descriptor Area acts as a [circular buffer](https://en.wikipedia.org/wiki/Circular_buffer).  You can determine the number of blocks in the Checkpoint Descriptor Area, by reading the `nx_xp_desc_blocks` member of the NX Superblock and ignoring the _most-significant bit_.  If the current map is stored in the last block of the descriptor area, then the next map will be stored in the first.
+5. The next Checkpoint Map Object should follow the current map object, but it is important to remember that the Checkpoint Descriptor Area acts as a [circular buffer](https://en.wikipedia.org/wiki/Circular_buffer).  You can determine the number of blocks in the Checkpoint Descriptor Area, by reading the `nx_xp_desc_blocks` member of the NX Superblock and ignoring the _most-significant bit_.  If the current map is stored in the last block of the descriptor area, then the next map will be stored in the first.
 
 ```c++
 // calculating the next index in the circular buffer
