@@ -198,7 +198,7 @@ img {
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
@@ -216,13 +216,12 @@ nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $helveticaNeue;
-  font-size: x-large;
+  font-size: large;
 
   @include mobile {
     float: none;
     margin-top: 9px;
     display: block;
-    font-size: large;
   }
 
   a {
@@ -254,6 +253,8 @@ nav {
 }
 
 .post {
+  max-width: 100ch;
+  margin: 0 auto;
 
   blockquote {
     margin: 1.8em .8em;
@@ -318,7 +319,7 @@ nav {
   .message {
     border: medium darkred solid;
     padding: 0 15px;
-    width: 75%;
+    max-width: 80ch;
     margin: 35px auto;
     font-size: smaller;
     background-color: $lightGray;
