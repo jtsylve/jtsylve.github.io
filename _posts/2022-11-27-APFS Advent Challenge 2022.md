@@ -38,3 +38,4 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 - [Day 9 - Volume Superblock Objects](/post/2022/12/13/APFS-Volume-Superblock)
 - [Day 10 - $100 Donation](/images/advent2022/donate2.png)
 - [Day 11 - File System Trees](/post/2022/12/15/APFS-FSTrees)
+- [Day 12 - Inode and Directory Records](/post/2022/12/16/APFS-Inode-and-Directory-Records)
