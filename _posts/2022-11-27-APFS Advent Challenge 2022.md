@@ -43,3 +43,4 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 - [Day 14 - Sealed Volumes](/post/2022/12/20/APFS-Sealed-Volumes)
 - [Day 15 - Keybags](/post/2022/12/21/APFS-Keybags)
 - [Day 16 - Wrapped Keys](/post/2022/12/22/APFS-Wrapped-Keys)
+- [Day 17 - Blazingly Fast Checksums with SIMD](/post/2022/12/23/Blazingly-Fast-Checksums-with-SIMD)
