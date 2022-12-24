@@ -19,7 +19,7 @@ On the other hand, if your computer has SIMD support, it can simultaneously perf
 
 During my journey, I came across some prior work by James D Guilford and Vinodh Gopal describing using SIMD for the [Fast Computation of Fletcher Checksums](https://www.intel.com/content/www/us/en/developer/articles/technical/fast-computation-of-fletcher-checksums.html) in ZFS.  While ZFS uses a different variant of a Fletcher checksum than APFS, this seemed like a great first project to get my hands dirty with vectorization.
 
-## Portability Concerns
+### Portability Concerns
 
 The authors of the Intel whitepaper use hand-coded [AVX](https://en.wikipedia.org/wiki/Advanced_Vector_Extensions) assembly instructions to perform their vectorization.  OpenZFS seems to have taken the same approach.  They have independent implementations full of inline assembly for Intel's [SSE](https://github.com/openzfs/zfs/blob/303678350a7253c7bee9d6a3347ee1bcdf9cc177/module/zcommon/zfs_fletcher_sse.c), [AVX2](https://github.com/openzfs/zfs/blob/303678350a7253c7bee9d6a3347ee1bcdf9cc177/module/zcommon/zfs_fletcher_intel.c), [AVX-512](https://github.com/openzfs/zfs/blob/303678350a7253c7bee9d6a3347ee1bcdf9cc177/module/zcommon/zfs_fletcher_avx512.c), and ARM's [NEON](https://github.com/openzfs/zfs/blob/303678350a7253c7bee9d6a3347ee1bcdf9cc177/module/zcommon/zfs_fletcher_aarch64_neon.c) architectures.  Apple takes a similar approach.  The Intel version of `apfs.kext` contains an SSE, AVX, and AVX2 vectorized implementations and a fallback serialized version if, for some reason, none of these instruction sets are supported. 
 The `arm64` version of the KEXT uses NEON vectorization instructions.
@@ -140,5 +140,9 @@ NEON | 368ns | 10.3417 GiB/s | 1.2x
 ## Conclusion
 
 For the proper application, SIMD vectorization can provide fantastic performance benefits.  In my testing, I demonstrated a 6x speedup and hashed APFS objects at over 31 Gigabytes per second on an iMac Pro from 2017!  The proposed SIMD additions to the C++ standard library are easy to use and generate high-performing, portable code.   I absolutely will be using this whenever I can.
+
+### Update (December 24, 2022)
+
+I [further improved](/post/2022/12/24/Blazingly-Fast-er-SIMD-Checksums) this code's performance to achieve even better performance!
 
 {% include advent2022.html %}
