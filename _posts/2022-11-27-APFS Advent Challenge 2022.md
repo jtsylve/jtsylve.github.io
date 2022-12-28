@@ -45,3 +45,4 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 - [Day 16 - Wrapped Keys](/post/2022/12/22/APFS-Wrapped-Keys)
 - [Day 17 - Blazingly Fast Checksums with SIMD](/post/2022/12/23/Blazingly-Fast-Checksums-with-SIMD)
 - [Day 18 - Decryption](/post/2022/12/26/APFS-Decryption)
+- [Day 19 - $100 Donation](/images/advent2022/donate3.png)
