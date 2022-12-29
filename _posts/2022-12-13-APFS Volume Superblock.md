@@ -94,7 +94,7 @@ typedef struct apfs_superblock {
 - `apfs_omap_oid`: The physical object identifier of the volume's object map
 - `apfs_root_tree_oid`: The virtual object identifier of the root file-system tree
 - `apfs_extentref_tree_oid`: The physical object identifier of the extent-reference tree
-- `apfs_snap_meta_tree_oid`: The virtual object identifier of the snapshot metadata tree
+- `apfs_snap_meta_tree_oid`: The physical object identifier of the snapshot metadata tree
 - `apfs_revert_to_xid`: The transaction identifier of a snapshot that the volume will revert to (or zero if not reverting)
 - `apfs_revert_to_sblock_oid`: The physical object identifier of a volume superblock that the volume will revert to (or zero i not reverting)
 - `apfs_next_obj_id`: The next identifier that will be assigned to a file-system object in this volume

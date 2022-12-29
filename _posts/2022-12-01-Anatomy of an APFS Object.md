@@ -127,7 +127,7 @@ B-Tree objects also contain subtypes, which help identify the specific purpose o
 | OMAP | 0x0b | Object Map | `omap_key_t` | `omap_val_t` |
 | FSTREE | 0x0e | File-System Record Tree | `j_key_t` | _variable_ |
 | BLOCKREFTREE | 0x0f | Extent Reference Tree | `j_phys_ext_key_t` | `j_phys_ext_val_t` |
-| SNAPMETATREE | 0x10 | Snapshot Metadata Tree | `j_snap_metadata_key_t` | `j_snap_metadata_val_t` |
+| SNAPMETATREE | 0x10 | Snapshot Metadata Tree | `j_key_t` | _variable_ |
 | OMAP_SNAPSHOT | 0x13 | Omap Snapshot Info | `xid_t` | `omap_snapshot_t` |
 | FUSION_MIDDLE_TREE | 0x15 | Tracks Cached SSD Fusion Blocks | `fusion_mt_key_t` | `fusion_mt_val_t` |
 | GBITMAP_TREE | 0x1a | General Purpose Bitmap Tree | `uint64_t` | `uint64_t` |
