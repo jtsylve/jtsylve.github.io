@@ -13,7 +13,7 @@ Knowledge of the AES key alone is not always enough for successful decryption.  
 
 ## Identifing Encrypted Blocks
 
-There are primarily two sets of data protected with the APFS _Volume Encryption Key_: [_File System Tree Nodes_](/post/2022/12/15/APFS-FSTrees) and [_File Extents_](post/2022/12/19/APFS-Data-Streams).  As we've discussed, _File System Tree Nodes_ store the _File System Records_ that contain the file system's metadata, and _File Extents_ contain the bulk of the data stored in a file's _Data Streams_.
+There are primarily two sets of data protected with the APFS _Volume Encryption Key_: [_File System Tree Nodes_](/post/2022/12/15/APFS-FSTrees) and [_File Extents_](/post/2022/12/19/APFS-Data-Streams).  As we've discussed, _File System Tree Nodes_ store the _File System Records_ that contain the file system's metadata, and _File Extents_ contain the bulk of the data stored in a file's _Data Streams_.
 
 ### Encrypted FS-Tree Nodes
 
