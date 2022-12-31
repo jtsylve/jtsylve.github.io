@@ -48,3 +48,4 @@ All good challenges needs rules in order to keep us honest.  Luckily for me, I'm
 - [Day 19 - $100 Donation](/images/advent2022/donate3.png)
 - [Day 20 - Snapshot Metadata](/post/2022/12/28/APFS-Snapshot-Metadata)
 - [Day 21 - Fusion Containers](/post/2022/12/29/APFS-Fusion-Containers)
+- [Day 22 - Retrospective](/post/2022/12/30/Challenge-Retrospective)
